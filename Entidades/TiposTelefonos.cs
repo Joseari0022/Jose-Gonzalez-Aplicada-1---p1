@@ -12,7 +12,6 @@ namespace Entidades
         [Key]
         public int TipoId { get; set; }
         public string Descripcion { get; set; }
-        public string ClientesTelefonos { get; set; }
         public string Telefono { get; set; }
 
         public virtual List<Clientes> Clientes { get; set; }
@@ -20,11 +19,11 @@ namespace Entidades
         {
             this.Clientes = new List<Clientes>();
         }
-        public TiposTelefonos(int tipoid, string Descripcion, string clientestelefonos)
+        public TiposTelefonos(int tipoid, string Descripcion, string telefono)
         {
             this.TipoId = tipoid;
             this.Descripcion = Descripcion;
-            this.ClientesTelefonos = clientestelefonos;
+            this.Telefono = Telefono;
             this.Clientes = new List<Clientes>();
         }
     }

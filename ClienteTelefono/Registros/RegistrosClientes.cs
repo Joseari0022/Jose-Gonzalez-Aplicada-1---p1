@@ -35,6 +35,7 @@ namespace ClienteTelefono
             var es = ClienteBll.Buscar(u.StringToInt(IdtextBox.Text));
             IdtextBox.Text = cl.ClienteId.ToString();
             NombretextBox.Text = cl.Nombres;
+            cl.FechaNacimiento = FechaNacimientodateTimePicker.Value;
             TiposTelefonosdataGridView.DataSource = null;
             TiposTelefonosdataGridView.DataSource = cl.TipoTelefono;
         }
